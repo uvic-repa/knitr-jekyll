@@ -1,0 +1,131 @@
+Sub LoopThroughString()
+ 
+Dim LookInHere As String
+Dim Counter As Integer
+ 
+'Use your own text here
+LookInHere = "DEFGHIJKLMNO"
+ 
+For Counter = 1 To Len(LookInHere)
+'MsgBox Mid(LookInHere, Counter, 1)
+    
+Dim inprng As Range
+    Set inprng = Sheets("Averages").Range(Mid(LookInHere, Counter, 1) & "2:" & Mid(LookInHere, Counter, 1) & "8761")
+Dim binrng As Range
+    Set binrng = Sheets("Averages").Range("Q2:Q8")
+    'MsgBox (binrng(10))
+Dim outputrng As Range
+    Set outputrng = Sheets("Bins").Range("B" & Counter & "3")
+    Application.Run "Histogram", inprng, outputrng, binrng, False, False, True, False
+Next
+ 
+End Sub
+
+
+
+Sub LoopThroughString2()
+ 
+Dim LookInHere As String
+Dim Counter As Integer
+Dim SplitCatcher As Variant
+ 
+'Use your own text here
+ 
+LookInHere = "I Heart AutomateExcel.com"
+ 
+SplitCatcher = Split(LookInHere, " ")
+ 
+For Counter = 0 To UBound(SplitCatcher)
+    MsgBox SplitCatcher(Counter)
+Next
+ 
+End Sub
+
+
+
+
+
+Sub Histo()
+
+
+For Each c In "BCDEFGHIJK".ToCharArray()
+
+Dim inprng As Range
+    Set inprng = Sheets(¡°average¡±).Range("b2:b8785")
+Dim binrng As Range
+    Set binrng = Sheets(¡°average¡±).Range("m2:m9")
+    MsgBox (binrng(10))
+Dim outputrng As Range
+    Set outputrng = Sheets(¡°average¡±).Range("o1")
+    Application.Run "Histogram", inprng, outputrng, binrng, False, False, True, False
+
+Next
+	End Sub
+	
+Sub Histo()
+For Each c In "BCDEFGHIJK".ToCharArray()
+Dim inprng As Range
+    Set inprng = Sheets(¡°average¡±).Range(CONCAT(c,"2:",c,"8785"))
+Dim binrng As Range
+    Set binrng = Sheets(¡°average¡±).Range("m2:m9")
+    MsgBox (binrng(10))
+Dim outputrng As Range
+    Set outputrng = Sheets(20).RangeCONCAT("B",(asc(c)-68)*13 )
+    Application.Run "Histogram", inprng, outputrng, binrng, False, False, True, False
+Next
+	End Sub	
+	
+TEXTJOIN(" ",TRUE,A4,B4,C4,D4,"is","great")
+CONCAT(c,"2:",c,"8785")
+
+CONCAT("B",(asc(c)-68)*13 )
+
+the asc function return values of chars or
+chr function to set a char
+
+so asc("A") is 65
+or chr(65) is "A"
+
+so maybe try
+
+for x=1 to 20
+testchar = chr(64+x) etc
+....
+next x
+
+
+dim iChar as Integer
+
+for iChar = Asc("a") to Asc("z")
+
+  msgbox Chr(iChar)
+
+next iChar
+
+
+Private Sub Command1_Click()
+    Dim i As Long
+
+    For i = 65 To 91
+    ' Uppercase alphabetic characters in the 
+    ' ASCII table go from 65="A" to 91="Z"
+        MsgBox Chr(i) ' Prints A to Z    
+    Next
+End Sub
+
+Private Sub Command2_Click()
+    Dim i As Long
+    Dim ch_a As String, ch_z As String
+
+    ch_a = "A"
+    ch_z = "Z"
+    For i = Asc(ch_a) To Asc(ch_z)
+        MsgBox "Character " & Chr(i) & " matches ASCII code number " & i
+    Next  
+End Sub
+
+Sub delrow()
+	For i = 1 To 17 Step 1
+	Worksheets(i).Rows("1418:1441").Delete
+	Next i
+End Sub

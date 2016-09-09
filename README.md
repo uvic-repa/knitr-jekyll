@@ -1,16 +1,25 @@
-This is a minimal example of a Jekyll-based website using **knitr** and R
-Markdown. The interesting bit of this repo is that you can actually serve the
-Jekyll website locally with R, and R Markdown posts can be compiled
-automatically, with the web pages automatically refreshed as well.
+This is a repo for energy research.
 
-After you are satisfied with the local preview, you can either just push the
-Markdown blog posts to your Github repo (e.g. the `gh-pages` branch), and let
-Github generate the website for you, or host the HTML files generated under the
-`_site/` directory on your own server.
+We keep data and code here.
 
-The original website was created from `jekyll new .` under the root directory,
-which was part of the [official Jekyll repo](https://github.com/jekyll/jekyll).
-The additional code (R, Makefile) in this repo is under the MIT License, and the
-[blog post](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html) I
-wrote is under the [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-International License.
+
+## Data
+
+### Scrape
+
+Data is Scrape from [environment Canada](http://climate.weather.gc.ca/historical_data/search_historic_data_e.html).
+The code is inside the data folder.
+
+
+
+## Process
+
+Data are combined into an excel file for modeling.
+Data are cleaned in R.
+
+And organized into xlxs file in Matlab and VBA.
+
+
+## modeling
+
+We use GAMS to solve an optimization problem.
