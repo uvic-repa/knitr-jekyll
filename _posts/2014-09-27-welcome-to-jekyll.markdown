@@ -1,25 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-09-27 23:16:53
-categories: jekyll update
+title:  "Welcome to Repo!"
+date:   2016-09-07 23:16:53
+categories: wind energy
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+This is a repo for a paper.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+This paper explores the viability of relying on wind power to replace upwards of 60% of electricity generation in Alberta that would be lost if coal-fired generation is phased out.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Using hourly wind data from 17 locations across Alberta, we are able to simulate the potential wind power output available to the Alberta grid when modern, 3.5 MW-capacity wind turbines are spread across the province.
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+Using wind regimes for the years 2006 through 2015, we find that available wind power is less than 60% of installed capacity 98% of the time, and below 30% of capacity 74% of the time. In addition, there is significant correlation between wind speeds at different locations, so it will always be necessary to rely on fossil fuel generation.
+
+Then, based on the results from a grid allocation model, we find that CO2 emissions can be reduced by about 30%, but only through a combination of investment in wind energy and reliance on purchases of hydropower from British Columbia. Only if nuclear energy is permitted into the generation mix would Alberta be able to meet its CO2-emissions reduction target in the electricity sector. With nuclear power, emissions can be reduced by upwards of 85%.
+
+
+[repo]:      https://web.uvic.ca/~repa/
+
