@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Repo!"
+title:  "Welcome to Repa!"
 date:   2016-09-07 23:16:53
 categories: wind energy
 ---
