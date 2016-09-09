@@ -9,5 +9,6 @@ twitter_username:
 github_username:  uvic-repa
 permalink: /:year/:month/:title.html
 paginate: 1
+paginate_path: "/wind/page:num/"
 # Build settings
 markdown: kramdown
