@@ -20,6 +20,6 @@ Data are cleaned in R.
 And organized into xlxs file in Matlab and VBA.
 
 
-## modeling
+## Modeling
 
 We use GAMS to solve an optimization problem.
