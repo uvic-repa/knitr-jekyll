@@ -10,7 +10,7 @@ The code is inside the data folder.
 
 ### Stations
 
-First, we tried 19 stations, but data in some  stations are not available.
+First, we tried 20 stations, but data in some  stations are not available.
 
 
 |       |      Name | ID                  | Location | name     | webid               |
@@ -34,9 +34,8 @@ First, we tried 19 stations, but data in some  stations are not available.
 | 17   | Whitecourt          | 71256    | Northern | WHITECOURT          | 27658 |
 
 
+Name and ID are used in environment Canada.
 
-We ended up 16 stations.
+name and webid are used in website for data scrapping.
 
-1.
-
-1.
+We ended up 17 stations.
