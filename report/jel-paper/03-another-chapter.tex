@@ -1,0 +1,56 @@
+\section{Alberta Model}
+\label{sec:Alberta Model}
+
+The Alberta grid allocation model is described in various places; here we provide a brief description as found in van Kooten et al. (2013). The Alberta Electric System Operator (AESO) is considered to be the decision maker, so the AESO’s profit function can be written as\footnote{It is more appropriate to refer to this as the ‘gross margin’ function. The reason is that (1) excludes many costs, such as ancillary services, that are required to operate a grid. We use the term ‘profit’ simply because it is more familiar. }: 
+\[\Pi =  	(1)\]
+where $\Pi$ is profit (\$); i refers to the generation source (coal, CT gas, wind, etc.); T is the number of hours in the one-year time horizon (8760); Dt refers to the load (demand) that has to be met in hour t (MW); Qi,t is the amount of electricity produced by generator i in hour t (MW); OMi is operating and maintenance cost of generator i (\$/MWh); and bi is the variable fuel cost of producing electricity from i (\$/MWh), which does not change with output (i.e., there are no economies of scale). We define Pj,t to be the price (\$/MWh) of electricity in each hour, with $j \in {AB, BC, MID, SK}$ referring to Alberta, British Columbia, MidC and Saskatchewan, respectively. While Alberta and MidC prices vary hourly, the BC and Saskatchewan prices are fixed at \$75 and \$56 per MWh, respectively. Mk,t refers to the amount imported by Alberta from region $k \in {BC, MID, SK}$ at t, while Xk,t refers to the amount exported from Alberta to region k; $\delta$ is the transmission cost (\$/MWh). 
+
+
+
+The first term in square brackets is simply the gross revenue earned by selling electricity to meet the Alberta load, while the second term refers to the overall costs of internal power generation. Costs are summed across all of the generators; for each generator, it is simply the variable operating \& maintenance cost plus fuel cost multiplied by the generator output over the year. In addition, the carbon tax paid by each generator is treated as a cost. The carbon tax (\$ per tCO2) is denoted by $T$ and is used to incentivize removal of fossil fuel capacity and entry of renewable or nuclear capacity, while $\Phi_i$ is the CO2 required to produce a MWh of electricity from generation source i (and depends on the fuel source). Then the third term in square brackets refers to the revenue from the sale of exports minus the cost of buying imports, with net exports accounting for the difference between load and internal generation in any hour. The terms in square brackets are then summed over the 8760 hours in the year to which the model is calibrated. 
+
+
+
+The final term in (1) permits the addition or removal of generating assets, where ai and di refer to the annualized cost of adding or decommissioning assets (\$/MW), Ci refers to the capacity of generating source i (MW), and $ \Delta C_i$ is the capacity added or removed. For wind assets, $\Delta CW$ is measured in terms of the number of wind turbines that are added (no reduction in numbers is permitted), each with a capacity of 3.5 MW (as discussed below). Given that wind energy is non-dispatchable (‘must run’), storage is assumed to be available in each period in neighboring jurisdictions via transmission interties; excess energy can be directed or retrieved if the Alberta system cannot respond quickly enough because of extreme variability in wind power output from one period to the next. Further, Ri is the amount of time it takes to ramp production from plant i. Transmission between Alberta and BC, and Alberta and MidC, is constrained depending on whether power is exported or imported; the import and export constraints are denoted TRMkt and TRXkt, respectively, with k defined above and capacity changing over time for reasons discussed below. 
+Objective function (1) is maximized subject to the following constraints:
+Demand is met every hour:$	 ; k \in {BC, MID, SK}$
+(2)
+Ramping-up constraint:	$Qi,t - Qi,(t-1) \le Ci/Ri,  \forall  i,t=2,…,T$	(3)
+Ramping-down constraint:	$Qi,t - Qi,(t-1) \geq -Ci/Ri, \forall i,t=2,…,T	$(4)
+Capacity constraints:
+$Qi,t \le Ci,  t,i	$(5)
+Import trans constraint: $	Mk,t \le TRMk,t, \forall k,t$	(6)
+Export trans constraint:$	Xk,t \le TRKk,t, \forall k,t$	(7)
+Non-negativity:	$Qi,t, Mk,t, Xk,t \geq 0, \forall t,i,k$	(8)
+In any given hour, electricity can only flow in one direction along a transmission intertie. To model this constraint requires the use of a binary variable for each intertie in the model. To avoid such a nonlinear constraint, we assume that the import and export capacities at any time are equal, and that they equal the total capacity of the line at that time ($TRMk,t = TRXk,t = TCAPk,t, \forall k, t$), although this applies only to the Alberta-BC intertie where the capacity varies in each period due to internal transmission constraints. These constraints relate, for example, to internal operations that could prevent imported electricity from being delivered to where it is needed. We then employ the following linear constraint to limit the flow of electricity to one direction:
+$Xk,t + Mk,t \le TCAPk,t, \forall k,t.$	(9)
+
+
+\subsection{Wind Data}
+
+Hourly wind speed data for 17 locations scattered throughout Alberta were collected from Environment Canada for the decade 2006 through 2015. The location with the highest average wind speed (8.58 m/s) over the period was Pincher Creek in southwestern Alberta, which is about 85 km southwest of Lethbridge, the main center in southern Alberta; Barnwell, which is about 45 km east and somewhat north of Lethbridge, came a distant second with an average wind speed of 4.71 m/s, followed by Raymond (due east of Pincher Creek and about 35 km southeast of Lethbridge), Lethbridge and Killam as the only five sites with average wind speeds above 4.0 m/s. Only Killam is not in southern Alberta as it is located 400 km directly north of Lethbridge. 
+The power generated by the wind depends not only on wind speed but also on the height of the turbine hub. To determine the actual power available from a wind turbine, the measured wind velocity must be adjusted to obtain wind speed at the turbine hub height. This is done using the following relationship:
+ $Vhub = Vdata ×  ,	$(10)
+where Vhub is the wind velocity (m/s) at the turbine hub height, Vdata is the measured wind velocity (m/s), Hhub is the height of the wind turbine hub (m), Hdata is the height (m) at which the data was measured, and $\alpha$ is the site shear component that is dependent on the type of ground surface on which the wind turbine is built. Empirical evidence suggests that $\alpha$  = 0.06 for open water, $\alpha$  = 0.10 for short grasses, $\alpha$  = 0.14 the most common value, $\alpha$  = 0.18 for low vegetation,$\alpha$  = 0.22 for forested regions, and $\alpha$  = 0.26 for obstructed flows. We use this information to set values of $\alpha$ depending on our knowledge of the terrain in the vicinity of the 17 towns in the dataset.  The wind velocity at our sites was measured at 10 m height. 
+Wind power is related to wind speed as follows: 
+$ p = ½ \rho  v3 \pi  r2, 	$(11)
+where p is the power of the wind measured in watts, v is wind speed measured in m/s, r is the radius of the rotor measured in meters, and $\rho$ is the density of dry air parameter (assumed equal to 0.94) measured in kg/m3. This formula is generally quite useful, but it neglects information on the turbine, particularly the wind speed at which power production begins as well as the cut-out speed where the rotator blade must be turned to avoid damage.
+Conversion of the available mechanical energy (wind speed) to electricity is based on the above relations and the technical specifications for a 3.5-MW capacity Enercon E-101 wind turbine.  Then, by weighting each location equally, but Pincher Creek at four times the weight of the other locations, we aggregated the potential power production at each location into a single wind power profile for an Alberta-wide, 3.5 MW turbine. The capacity factor of Alberta’s wind regime averaged 28.7\% over the 12 years reaching a high of 33.4\% in 2013 and a low of 23.3\% in 2010; for Pincher Creek, the CF averaged an incredible 55.5\%, ranging from 33.9\% (2010) to 79.8\% (2013).  As indicated in Figure 3, even if Alberta were to build wind farms across a vast area, about 60\% of the time the power produced would be less than one-quarter of the installed capacity. Worse yet, about 96\% of the time, wind power would be below half of the rated capacity, and there are only for 17 hours per year on average when the potential electricity available from wind exceeded 75\% of capacity. On average, there would be no wind output whatsoever for 5.2 hours during the year, ranging from one hour in 2006 to 13 hours in 2011. No matter how much wind capacity is installed in Alberta, or where it is located, there are times when no wind power is available and many, many times when wind power output is inadequate. 
+
+
+\subsection{Generating Assets}
+
+
+
+
+To keep the analysis simple, we ignore marginal generation, such as run-of-river hydro that one subtracts from load in any event, and small amounts of electricity generated from biomass, biogas and flare gas. As evident from Table 1, hydro accounts for 2\% and biomass for about 3\% of Alberta’s requirements, while other clean energy sources account for negligible power output. Thus, we focus only on coal, natural gas, wind and potentially nuclear energy. Between them, coal and natural gas account for all of the baseload generation, or 63.072 TWh (=7,200 MW × 8760 hours / 1 million), while the remaining 17.19 TWh of electricity is produced by baseload plants, CT gas, wind and imports. Together coal and co-gen plants account for 10,150 MW of capacity, coal for 6,258 MW and co-gen 3,892 MW (more than 90\% of co-gen plants burn natural gas). For simplicity, we assume that this constitutes Alberta’s total baseload capacity, while remaining capacity consists of 7,080 MW of CT gas and 1,459 MW of wind (or 417 turbines of 3.5 MW capacity). 
+
+
+
+
+
+
+
+
+
+

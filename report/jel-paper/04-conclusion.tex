@@ -1,0 +1,135 @@
+\section{Results}
+\label{sec:Results}
+
+
+
+
+The model is parameterized for 2015 – the generation mix, the load and price profiles, and transmission intertie capacities are based on 2015 data from the AESO. However, rather than employing the existing wind profile (see van Kooten 2016b), we employ each of the ten wind profiles that we developed in the previous section. That is, each run of the model provides outcomes for each of the ten wind profiles. We assume that 417 wind turbines are already in place (with a total capacity of 1,460 MW), although their wind power profile is different from that of the existing wind farms that have the same capacity. We also note that wind speeds are higher for the period 2012-2015 than for the preceding six years, which turns out to make a large difference as indicated below. We begin by considering the wind speed profile for 2015 only. 
+In Table 4, we provide the results for the 2015 wind speed profile and several carbon taxes, two levels of the BC-Alberta intertie capacity (storage potential), and whether or not nuclear power is permitted. In the case of the 2015 wind profile, 3226 wind turbines are installed even when there is no carbon tax; that is, the wind profile is such that it pays to install wind power, although, for wind profiles associated with years 2006 through 2011, it is not worthwhile installing any new wind turbines beyond those already in place (417). That is, because the variable costs of wind are effectively zero, whenever there is sufficient wind so that the savings in the variable costs of wind versus other generating assets exceeds the annualized cost of investing in wind then wind will be brought into the generation mix. This occurs for 2012-2015, but not in earlier years.  
+With a carbon tax and the 2015 wind profile, the optimal number of turbines to install reaches its maximum of 3,500. Again, this is not the case for other wind profiles; indeed, only if the carbon tax is \$100/tCO2 is it worthwhile to increase turbines from 417 to 3,500. In particular, for the 2010 wind profile, it is only worthwhile to invest in wind energy if the carbon price is \$100; for the \$50/tCO2 scenario, the number of turbines remains at 417. This has implications for in the nuclear case as well. 
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\caption{Table 4: Wind versus Nuclear Power in a Carbon Constrained World, Results for the Alberta Electricity Grid, 2015 Wind Profile}
+\label{my-label4}
+
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\multirow{2}{*}{Scenarios (Carbon price)} & \multirow{2}{*}{Mt CO2} & \multicolumn{2}{l}{AB to/from BC (GWh)} & \multicolumn{3}{l}{Optimal capacity (MW)} \\ \cmidrule(l){3-7} 
+                                          &                         & Import from         & Export to         & Coal         & Co-gen       & Gas         \\ \midrule
+\multicolumn{7}{l}{\textit{Base}}                                                                                                                         \\
+\$0                                       & 32.74                   & 4,819               & 54                & 6,258        & 3,292        & 4,184       \\
+\$30                                      & 29.05                   & 4,829               & 57                & 6,258        & 3,292        & 6,077       \\
+\$50                                      & 29.03                   & 4,862               & 50                & 0            & 3,292        & 6,320       \\
+\$100                                     & 28.80                   & 4,878               & 34                & 0            & 3,759        & 6,306       \\
+\multicolumn{7}{l}{\textit{Double Transmission}}                                                                                                          \\
+\$50                                      & 25.46                   & 9,707               & 40                & 0            & 3,292        & 7,278       \\
+\$100                                     & 25.41                   & 9,796               & 28                & 0            & 3,292        & 6,319       \\
+\multicolumn{7}{l}{\textit{Nuclear, Existing Transmission}}                                                                                               \\
+\$100                                     & 8.25                    & 4,312               & 221               & 0            & 3,292        & 4,220       \\
+\multicolumn{7}{l}{\textit{Nuclear, double transmission}}                                                                                                 \\
+\$100                                     & 8.16                    & 8,870               & 232               & 0            & 3,292        & 4,413       \\ \bottomrule
+\end{tabular}
+
+
+\end{table}
+
+
+
+
+Because our model utilizes all available capacity on the BC-Alberta transmission intertie, wind is encouraged even when there is no carbon tax. Given that imports are the cheapest source of power whenever the internal Alberta price exceeds the fixed BC price, Alberta imports much more along the intertie than it exports. By increasing the variable costs of producing electricity from fossil fuels, the carbon tax exacerbates the import effect because imports are considered to be carbon free. Hence, as the carbon tax increases in the base scenarios, we see an increase in imports and a reduction in exports (which are taxed when produced by fossil fuel assets).
+Now consider the impact of the various wind, carbon tax and nuclear energy scenarios on CO2 emissions. Emissions are provided in Table 5 only for the case of the existing capacity constraints on transmission interties. As indicated in the first column, the better wind scenarios (2012-2015) lead to greater investments in wind turbines and lower CO2 emissions in order to meet the Alberta 2015 load. With a carbon tax of \$30/tCO2 there is a significant reduction in emissions, ranging from 6.0\% in 2013 (when the wind regime was sufficient to warrant building the maximum 3500 turbines) to 38.0\% in 2011 (when no investment in wind energy occurred without incentives). As the carbon tax increases from \$30 to \$50 and then to \$100 per tCO2, emission reductions were much smaller reflecting either weak wind regimes or no further potential to add more turbines. Compared to maximum annual emissions of 54.85 Mt CO2 (under the weak 2010 wind regime), the best emissions that could be accomplished with a maximum investment in wind energy would occur in 2013, namely, 28.25 Mt CO2 – a reduction of 48.5\% compared to 2010 baseline emissions. This comparison is invalid, however, since it compares results under different wind regimes. More appropriately, if we look at average annual emissions over the decade, we find that they fell from 45.27 to 31.73 Mt CO2, or by only 30\%. 
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\caption{Table 5: Greenhouse Gas Emissions for Ten Wind Profiles, Various Carbon Taxes, With and Without Nuclear Energy, Mt CO2\textsuperscript{a}}
+\label{my-label5}
+\begin{threeparttable}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\multicolumn{1}{c}{\multirow{2}{*}{Year}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Base\\ \$0/tCO2\end{tabular}} & \multicolumn{3}{c}{No Nuclear}                                                  &                      & \multicolumn{1}{c}{With Nuclear} \\ \cmidrule(l){3-7} 
+\multicolumn{1}{c}{}                      &                                                                          & \multicolumn{1}{c}{\$30} & \multicolumn{1}{c}{\$50} & \multicolumn{1}{c}{\$100} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\$100}        \\ \midrule
+2006                                      & 54.58                                                                    & 45.12                    & 38.65                    & 33.95                     &                      & 4.86                             \\
+2007                                      & 54.44                                                                    & 43.70                    & 33.64                    & 33.29                     &                      & 5.77                             \\
+2008                                      & 54.49                                                                    & 45.05                    & 34.00                    & 33.58                     &                      & 5.42                             \\
+2009                                      & 54.59                                                                    & 45.13                    & 40.63                    & 34.16                     &                      & 4.92                             \\
+2010                                      & 54.85                                                                    & 45.32                    & 45.23                    & 35.52                     &                      & 4.80                             \\
+2011                                      & 54.30                                                                    & 33.67                    & 32.82                    & 32.53                     &                      & 6.89                             \\
+2012                                      & 30.59                                                                    & 28.70                    & 28.67                    & 28.51                     &                      & 8.89                             \\
+2013                                      & 30.26                                                                    & 28.46                    & 28.43                    & 28.25                     &                      & 8.83                             \\
+2014                                      & 31.84                                                                    & 28.94                    & 28.91                    & 28.68                     &                      & 8.40                             \\
+2015                                      & 32.74                                                                    & 29.05                    & 29.03                    & 28.80                     &                      & 8.45                             \\
+\textbf{Average}                          & \textbf{45.27}                                                           & \textbf{37.31}           & \textbf{34.00}           & \textbf{31.73}            & \textbf{}            & \textbf{6.72}                    \\ \bottomrule
+\end{tabular}
+
+
+    \begin{tablenotes}
+      \small
+      \item a Carbon taxes are \$/tCO2
+    \end{tablenotes}
+
+\end{threeparttable}
+
+
+\end{table}
+
+
+
+
+The potential for including nuclear energy into the generation mix changes everything. Now average annual emissions fall from 45.27 to 6.72 Mt CO2, or by slightly more than 85\%. It also turns out that the average costs of reducing carbon emissions is lower under the nuclear option than it is under all of the other options (see Table 6). There are wind regimes and carbon tax scenarios where the cost of reducing emissions is negative, indicating that the tax revenue exceeds the returns to the generators so it is socially beneficial to reduce emissions by investing in wind energy but not privately beneficial.  However, costs vary greatly by wind regime and the level of the carbon tax. Therefore, it is necessary to look at the average costs over the decade, which are provided in the last row of Table 6. These indicate that average costs are greater than \$800/tCO2. In comparison, average costs of reducing CO2 emissions under a nuclear option never exceed \$500/tCO2 and average about \$270/tCO2.  
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\caption{Table 6: Average Costs of Reducing Greenhouse Gas Emissions for Ten Wind Profiles, Various Carbon Taxes, With and Without Nuclear Energy, \$/tCO2\textsuperscript{a}}
+\label{my-label6}
+\begin{threeparttable}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+\multirow{2}{*}{Year} & \multicolumn{3}{c}{No Nuclear}                              &           & With Nuclear      \\ \cmidrule(l){2-6} 
+                      & \$30              & \$50              & \$100               &           & \$100             \\ \midrule
+2006                  & \$ 742.79         & \$ 465.74         & \$ 481.89           &           & \$ 190.58         \\
+2007                  & \$ 607.88         & –\$ 64.44         & \$ 408.25           &           & \$ 186.58         \\
+2008                  & \$ 89.99          & –\$ 56.82         & \$ 436.87           &           & \$ 189.13         \\
+2009                  & \$ 1,364.39       & \$ 532.75         & \$ 754.75           &           & \$ 314.53         \\
+2010                  & \$ 72.38          & \$ 906.03         & \$ 521.85           &           & \$ 195.56         \\
+2011                  & \$ 167.21         & \$ 211.08         & \$ 366.71           &           & \$ 167.80         \\
+2012                  & \$ 3,606.35       & \$ 4,125.51       & \$ 5,233.49         &           & \$ 333.36         \\
+2013                  & \$ 346.51         & \$ 901.77         & \$ 5,512.62         &           & \$ 478.38         \\
+2014                  & \$ 2,296.96       & \$ 532.11         & \$ 3,526.26         &           & \$ 428.89         \\
+2015                  & –\$ 28.12         & \$ 1,906.09       & \$ 2,527.56         &           & \$ 390.16         \\
+\textbf{Average}      & \textbf{\$845.12} & \textbf{\$864.53} & \textbf{\$1,806.39} & \textbf{} & \textbf{\$270.45} \\ \bottomrule
+\end{tabular}
+
+    \begin{tablenotes}
+      \small
+      \item a Values are calculated relative to emissions and net returns in the base case. Negative values indicate that, for the scenario, costs are lower than in the base case.
+    \end{tablenotes}
+
+\end{threeparttable}
+
+\end{table}
+
+
+
+Surprisingly, compared to other studies (van Kooten 2016b; van Kooten et al. 2013), the model results indicate that wind and nuclear energy can coexist, but not in all cases. For the 2011-2015 wind regimes, it would pay to invest in the full complement of 3500 turbines along with an average of about 3,600 MW of nuclear power compared to an average of nearly 6,500 MW of nuclear capacity for the period 2006-2011 when wind speed regimes led to lower levels of wind power and smaller investments in wind turbines. Indeed, using the 2010 wind regime, it is not worthwhile to invest in new wind capacity while nuclear capacity tops out at 7,120 MW.
+
+
+
+
+
+
+ we have \citep{Officer1996} is great.

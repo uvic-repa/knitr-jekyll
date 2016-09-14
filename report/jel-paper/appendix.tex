@@ -1,0 +1,109 @@
+\begin{appendices}
+
+The analysis employs an ENERCON E-101 turbine with a nameplate capacity of 3.5 MW. The hub height is 99 m, while the rotor diameter is 101 m (50.5 m radius), with a swept area of 8,012 m2. The turbine has three blades and variable rotation speed between 4 and 14.5 rpm, and built-in lightning protection. The power curve is given in Figure A1.
+
+% Please add the following required packages to your document preamble:
+%https://en.wikibooks.org/wiki/LaTeX/Tables
+% pos
+% \usepackage{booktabs}
+\begin{table}[bp]
+\centering
+\caption{Table A1: Summary of Wind Speed (m/s), Wind Shear Multiplier and Power Output (MW)}
+\label{my-label7}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Location                                                    & Average Wind Speed (m/s) & Wind Shear Multiplier ($\alpha$) & \begin{tabular}[c]{@{}l@{}}Average Power\\   Output (MW)\end{tabular} \\ \midrule
+Barnwell                                                    & 4.71                     & 0.1                       & 0.74                                                                  \\
+Beaverlodge                                                 & 3.02                     & 0.18                      & 0.5                                                                   \\
+Brooks                                                      & 3.5                      & 0.1                       & 0.39                                                                  \\
+\begin{tabular}[c]{@{}l@{}}Fort\\   Vermillion\end{tabular} & 1.82                     & 0.22                      & 0.12                                                                  \\
+\begin{tabular}[c]{@{}l@{}}Grand\\   Prairie\end{tabular}   & 3.35                     & 0.1                       & 0.31                                                                  \\
+Killam                                                      & 4.01                     & 0.14                      & 0.61                                                                  \\
+Lethbridge                                                  & 4.49                     & 0.1                       & 0.7                                                                   \\
+Lindbergh                                                   & 3.13                     & 0.14                      & 0.3                                                                   \\
+\begin{tabular}[c]{@{}l@{}}Medicine\\   Hat\end{tabular}    & 3.52                     & 0.14                      & 0.49                                                                  \\
+\begin{tabular}[c]{@{}l@{}}Peace\\   River\end{tabular}     & 2.95                     & 0.2                       & 0.49                                                                  \\
+\begin{tabular}[c]{@{}l@{}}Pincher\\   Creek\end{tabular}   & 8.58                     & 0.14                      & 1.85                                                                  \\
+Prentiss                                                    & 3.95                     & 0.2                       & 0.73                                                                  \\
+Raymond                                                     & 4.56                     & 0.1                       & 0.71                                                                  \\
+Valleyview                                                  & 3.9                      & 0.22                      & 0.8                                                                   \\
+Vegreville                                                  & 3.72                     & 0.14                      & 0.28                                                                  \\
+\begin{tabular}[c]{@{}l@{}}Violet\\   Grove\end{tabular}    & 2.99                     & 0.1                       & 0.43                                                                  \\
+Whitecourt                                                  & 2.66                     & 0.22                      & 0.45                                                                  \\ \bottomrule
+\end{tabular}
+\end{table}
+ 
+
+
+
+Correlation between sites is important to guarantee at least some level of wind output at any time. The wind-speed correlation matrix across sites is provided in Table A2. There are many instances where the correlations of wind speeds across locations exceed 0.60, which confirms that lack of wind is likely to occur at more than one location at the same time. Pincher Creek wind speeds are essentially uncorrelated with the other locations, as are those of Grande Prairie.
+ 
+Figure A1: Power Curve for ENERCON-101, 3.5 MW Capacity Turbine
+ 
+Table A2: Correlation Matrix of Wind Speeds
+ 
+
+ 
+Explanation: 
+ 	>0.8
+ 	0.6 - 0.79
+	0.4-0.59
+	<0.4
+
+
+\end{appendices}
+
+% some code for table notes
+
+% best normal solution
+% http://www.latex-community.org/forum/viewtopic.php?f=5&t=929
+
+%%%%%%%
+%http://tex.stackexchange.com/questions/109467/footnote-in-tabular-environment
+
+% \begin{table}[h]
+% \caption{Example of test session results}
+% \label{tab:test_results}
+% \centering
+% \begin{threeparttable}
+% \begin{tabular}{|l|l|l|}
+%     \hline
+%     Mutants & CPU\tnote{\it a}     & Memory\tnote{\it b}    \\ \hline
+%     Mutant-1   & 23 & 15 \\ \hline
+%     Mutant-2   & 32 & 11 \\ \hline
+% \end{tabular}
+% \begin{tablenotes}
+%     \item[\it a] Measured in percentages.
+%     \item[\it b] Measured in kilobytes (KB).
+% \end{tablenotes}
+% \end{threeparttable}
+% \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \bigskip
+
+% \begin{minipage}{1\columnwidth}%
+% \renewcommand\footnoterule{ \kern -1ex}
+% \begin{tabular}{lll}
+% \hline
+% aaa\footnote{First normal (alphabetic) foot table} & aaa  & aaa\\
+% aaa & aaa & aaa\footnote{Another table note}\\
+% aaa & \footnote{One more}aaa & aaa\\
+% aaa\footnote{Last footnote} & aaa & aaa\\
+% \hline 
+% \end{tabular}\\% 
+
+
+% \end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
